@@ -1,0 +1,2 @@
+export const SHOW_BOTTOM_TAB = 'SHOW_BOTTOM_TAB';
+export const HIDE_BOTTOM_TAB = 'HIDE_BOTTOM_TAB';
