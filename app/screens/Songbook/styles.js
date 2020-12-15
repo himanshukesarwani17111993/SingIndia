@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginTop: 20,
+    marginTop: 10,
   },
   inputView: {
     flexDirection: 'row',
@@ -86,7 +86,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   rightView: {
-    marginLeft: 15,
+    marginLeft: 15
+    ,marginTop:-5
   },
   song: {
     fontSize: 14,

@@ -32,8 +32,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   content: {
-    flex: 1,
-    marginTop: 20,
+    flex: 1
   },
   inputView: {
     flexDirection: 'row',
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
     elevation: 6,
-    height: 50,
+    height: 40,
     borderRadius: 36,
     paddingHorizontal: 10,
   },
@@ -72,6 +71,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginHorizontal: 5,
     justifyContent: 'center',
+  },
+  optionsCard1: {
+    backgroundColor: COLORS.COLOR_PRIMARY,
+    height: 35,
+    alignSelf:'baseline',
+    borderBottomLeftRadius: 30,
+    borderTopRightRadius: 30,
+    borderWidth: 0,
+    paddingHorizontal: 20,
+    marginHorizontal: 5
   },
   optionsContainer: {
     flexDirection: 'row',
@@ -92,6 +101,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#999999',
     fontFamily: FONTS.FONT_REGULAR,
+  },
+  MostPopularSearches: {
+    fontSize: 14,
+    color: '#000',
+    marginTop: 10,
+    marginLeft: 10,
+    fontWeight:'bold',
+    fontFamily: FONTS.FONT_BOLD,
   },
   artist: {
     fontSize: 13,

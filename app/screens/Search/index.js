@@ -98,7 +98,11 @@ export default function Home({ navigation, route }) {
             />
           </View>
         </View>
-
+        <Text style={styles.MostPopularSearches}>Search History</Text>
+        <Card containerStyle={[styles.optionsCard1]}>
+          <Text style={styles.categoryText}>Just Do it </Text>
+        </Card>
+        <Text style={styles.MostPopularSearches}>Most Popular Searches</Text>
         <View style={styles.content}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {options.map((item, index) => renderOptions(item, index))}
@@ -108,12 +112,12 @@ export default function Home({ navigation, route }) {
           {isSearching ? (
             <ActivityIndicator />
           ) : (
-            <FlatList
-              data={list}
-              keyExtractor={(_, index) => index.toString()}
-              renderItem={({ item, index }) => renderList(item, index)}
-            />
-          )}
+              <FlatList
+                data={list}
+                keyExtractor={(_, index) => index.toString()}
+                renderItem={({ item, index }) => renderList(item, index)}
+              />
+            )}
         </View>
       </View>
     </SafeAreaView>

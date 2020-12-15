@@ -6,6 +6,10 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
+  image: {
+    width: 20,
+    height: 20,
+  },
   container: {
     flex: 1,
   },
@@ -34,15 +38,11 @@ export default StyleSheet.create({
     borderTopLeftRadius: 120,
   },
   outerCircleCard: {
-    height: '150%',
-    width: '150%',
-    left: -100,
-    borderWidth: 0,
-    elevation: 10,
-    borderRadius: 400,
-    margin: 0,
-    padding: 0,
-    bottom: 20,
+    marginBottom:-100,
+    backgroundColor:"#d3d3d3",
+    elevation:3,
+    borderRadius:Dimensions.get('window').width*0.50,
+    margin: -Dimensions.get('window').width*0.05
   },
   innerCard: {
     height: '100%',
@@ -56,8 +56,7 @@ export default StyleSheet.create({
     top: '20%',
     paddingTop: 50,
     justifyContent: 'flex-start',
-    alignItems: 'center',
-    // bottom: 20,
+    alignItems: 'center'
   },
   circlelist: {
     borderRadius:

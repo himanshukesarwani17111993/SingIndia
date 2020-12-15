@@ -3,34 +3,94 @@ import {
   Text,
   View,
   SafeAreaView,
-  ScrollView,
+  FlatList,
   Image,
   Dimensions,
 } from 'react-native';
-import { Card } from 'react-native-elements';
 import { IMAGES } from '../../config/images';
-import CircleList from 'react-native-circle-list';
-
 import styles from './styles';
-
 const Language = () => {
+  const DATA = [
+    {
+      id: 'bd7acbea-c1b1-asd46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3asdda1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+    {
+      id: 'bd7acbea-casd1b1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-casd605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3dasda1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+    {
+      id: 'bd7acbea-c1bsad1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605asd-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471fasd-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+    {
+      id: 'bd7acbea-c1b1-46casd2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-aasd4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bsadd96-145571e29d72',
+      title: 'Third Item',
+    },
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3adasd53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f6sadasd3',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571easd29d72',
+      title: 'Third Item',
+    }
+  ];
+  const renderItem = ({ item }) => (
+    <Item title={item.title} />
+  );
+  
+const Item = ({ title }) => (
+  <View style={styles.item}>
+    <Text style={{width:Dimensions.get('window').width/3,alignSelf:"center",justifyContent:'center'}}>{title}</Text>
+  </View>
+);
   const renderLanguages = (item, index) => {
     return (
-      <Text style={{ bottom: Dimensions.get('window').width * 0.6, right: 20 }}>
-        {item}
-      </Text>
-      // <View key={index}>
-      //   <Card containerStyle={styles.card}>
-      //     <Text>asd</Text>
-      //   </Card>
-      //   <Card>
-      //     <Text>{item}</Text>
-      //   </Card>
-      // </View>
+      <View>
+        <Text >
+          {item}
+        </Text>     
+        <Image source={IMAGES.story2} style={styles.image} />   
+      </View>
     );
   };
-  const keyExtractor = item => item;
-
   return (
     <SafeAreaView style={styles.screen}>
       <View style={styles.container}>
@@ -39,27 +99,13 @@ const Language = () => {
           <Text style={styles.languageText}>Punjabi</Text>
         </View>
         <View style={{ flex: 1 }}>
-          <Card containerStyle={styles.outerCircleCard}>
-            <View style={{ flex: 1 }} />
-            <Card containerStyle={styles.innerCard}>
-              {/* <ScrollView horizontal style={{ backgroundColor: 'red' }}>
-                {languages.map((item, index) => renderLanguages(item, index))}
-              </ScrollView> */}
-              {/* <ScrollView
-                style={{
-                  borderRadius: 200,
-                  backgroundColor: 'red',
-                }}
-                horizontal>
-                {languages.map((item, index) => renderLanguages(item, index))}
-              </ScrollView> */}
-              {/* <CircleList
-                data={languages}
-                keyExtractor={keyExtractor}
-                renderItem={renderLanguages}
-              /> */}
-            </Card>
-          </Card>
+        <FlatList
+        style={{elevation:5}}
+          contentContainerStyle={{borderRadius: 6, overflow: 'hidden'}}
+          horizontal={true}
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}/>
         </View>
       </View>
     </SafeAreaView>

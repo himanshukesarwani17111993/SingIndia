@@ -28,6 +28,7 @@ export const COLORS = {
   COLOR_PRIMARY_GRADIENT: '#ed8770',
   COLOR_SECONADRY_GRADIENT: '#8a56ac',
   COLOR_THIRD_BUTTON: '#241332',
+  COLOR_Dark_Pink1: '#D288E8',
 };
 
 export const FONTS = {

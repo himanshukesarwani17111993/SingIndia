@@ -2,9 +2,11 @@
  */
 
 export const ICONS = {
+  close:require('../assets/images/close.png'),
   startedIcon: require('../assets/images/startedIcon.png'),
   logo: require('../assets/images/icon.png'),
   song: require('../assets/images/songicon.png'),
+  next: require('../assets/images/next.png'),
   feed: require('../assets/images/feed.png'),
   feedblack: require('../assets/images/feedblack.png'),
   users: require('../assets/images/users.png'),
@@ -37,9 +39,15 @@ export const IMAGES = {
   drawerheader: require('../assets/images/drawerheader.png'),
   splashlogo: require('../assets/images/splashlogo.png'),
   circlecard: require('../assets/images/circlecard.png'),
+  medal:require('../assets/images/medal.png'),
   firstrow: require('../assets/images/firstrow.png'),
   secondrow: require('../assets/images/secondrow.png'),
   thirdrow: require('../assets/images/thirdrow.png'),
+  heart: require('../assets/images/heart.png'),
+  search: require('../assets/images/search.png'),
+  speechbubble: require('../assets/images/speechbubble.png'),  
+  leftarrow: require('../assets/images/leftarrow.png'),
+  closeblack: require('../assets/images/closeblack.png'),  
   locationbg: require('../assets/images/locationbg.png'),
   profileTab: require('../assets/images/profiletab.png'),
   recentPicOne: require('../assets/images/recentpic1.png'),
